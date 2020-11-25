@@ -30,3 +30,4 @@ RUN python setup.py install
 
 # copy from test to ensure test stage runs before runtime stage in buildx
 COPY --from=test /app/.coverage .
+COPY icloud_pd/photos.py /usr/lib/python3.8/site-packages/pyicloud_ipd/services/photos.py
